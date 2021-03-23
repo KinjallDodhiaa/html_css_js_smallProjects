@@ -1,0 +1,57 @@
+ @import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+ :root{
+     font-size: 62.5%;
+ }
+
+ * {
+     box-sizing: border-box;
+ }
+ 
+ body{
+     font-family: 'Roboto', sans-serif;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
+     overflow: hidden;
+     margin: 0;
+ }
+
+ .container{
+     display: flex;
+     width: 90vw;
+ }
+
+ .panel{
+     margin: 10px;
+     border-radius: 50px;
+     position: relative;
+     flex: 0.5;
+     height: 80vh;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     transition: flex 0.7s ease-in;
+     cursor: pointer;
+ }
+
+ .panel h3{
+     position: absolute;
+     bottom: 20px;
+     left: 20px;
+     color: #fff;
+     font-size: 2.2rem;
+     opacity: 0;
+     transition: opacity 0.3s ease-in 0.4s;
+     
+ }
+
+ .panel.active{
+     flex: 5;
+ }
+
+ .panel.active h3{
+     opacity: 1;
+ }
